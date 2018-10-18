@@ -33,8 +33,13 @@ wget http://www.cvlibs.net/download.php?file=data_road.zip
 ```
 python download_data.py --kitti_url URL_YOU_RETRIEVED
 ```
+vgg16.npy 下载存储到 DATA/weights
+data_road.zip 下载解压到 DATA/data_road
+data/train3.txt data/val3.txt data/testing.txt 复制到 DATA/data_road
 
-## 2.4 注意：只运行demo.py的话不需要下载道路数据。2.3仅是你需要训练自己的模型时才必要。推荐使用2.3.2下载数据，这会自动提取和准备数据。
+
+## 2.4 注意
+只运行demo.py的话不需要下载道路数据。2.3仅是你用train.py训练自己的模型时才必要。推荐使用2.3.2下载数据，这会自动提取和准备数据。如果你想掌握数据存储在哪，请看3.2Manage data storage。
 
 
 # 3 教程
@@ -45,6 +50,9 @@ python demo.py --input_image data/demo/demo.png
 python evaluate.py
 python train.py --hypes hypes/KittiSeg.json
 ```
+
+### 3.1.1 demo.py
+logdir=RUNS/KittiSeg_pretrained
 
 如果你想理解代码，建议先看demo.py。作者已经在每一步写了说明。
 
